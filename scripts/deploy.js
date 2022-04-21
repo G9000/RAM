@@ -12,7 +12,10 @@ const main = async () => {
   await txn.wait();
   console.log("Minted domain julio.mars");
 
-  txn = await domainContract.setRecord("julio", "Am I on mars??");
+  txn = await domainContract.setRecord(
+    "julio",
+    "Born too soon for a space travel"
+  );
   await txn.wait();
   console.log("Set record for julio.mars");
 
